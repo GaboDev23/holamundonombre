@@ -2,10 +2,9 @@
 
 ## 📌 Descripción
 
-Este programa es una variante del clásico **"Hola mundo"**, pero con un pequeño upgrade:
-👉 ahora interactúa con el usuario solicitando su nombre y mostrándolo en pantalla.
+Este proyecto es una versión mejorada del clásico **"Hola mundo"**, donde el programa interactúa con el usuario solicitando su nombre y mostrándolo en pantalla.
 
-Es un paso más allá del ejemplo básico, ya que introduce:
+Introduce conceptos fundamentales como:
 
 * Entrada de datos
 * Variables
@@ -13,7 +12,34 @@ Es un paso más allá del ejemplo básico, ya que introduce:
 
 ---
 
-## 💻 Lenguaje incluido
+## 💻 Lenguajes incluidos
+
+### 🔹 C++
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string nombre;
+
+    std::cout << "Ingresa tu nombre: ";
+    std::getline(std::cin, nombre);
+
+    std::cout << "\n";
+
+    std::cout << "Hola mundo, Bienvenido " << nombre << "\n";
+}
+```
+
+#### ▶ Compilación y ejecución
+
+```bash
+g++ holamundonombre.cpp -o holamundonombre
+./holamundonombre
+```
+
+---
 
 ### 🔹 Pascal
 
@@ -28,9 +54,7 @@ begin
 end.
 ```
 
----
-
-## ▶ Compilación y ejecución
+#### ▶ Compilación y ejecución
 
 ```bash
 fpc holamundonombre.pas
@@ -41,42 +65,34 @@ fpc holamundonombre.pas
 
 ## 🧠 Explicación simple
 
-El programa hace lo siguiente:
+El programa:
 
-1. Pide al usuario su nombre
-2. Guarda ese nombre en una variable
-3. Muestra un mensaje personalizado
+1. Pide tu nombre
+2. Guarda ese dato
+3. Te saluda con un mensaje personalizado
 
 Ejemplo:
 
 ```
 Ingresa tu nombre: Gabo
-Hola mundo, bienvenido Gabo
+Hola mundo, Bienvenido Gabo
 ```
 
 ---
 
 ## 📖 Explicación formal
 
-* `var nombre: string;`
-  Declara una variable de tipo cadena para almacenar texto.
+* **C++**
 
-* `write(...)`
-  Muestra un mensaje sin salto de línea.
+  * `std::string` almacena texto
+  * `std::getline()` permite leer líneas completas
+  * `std::cout` imprime en consola
 
-* `readln(nombre)`
-  Captura la entrada del usuario desde teclado.
+* **Pascal**
 
-* `writeln(...)`
-  Imprime el mensaje final con salto de línea.
-
----
-
-## 🎯 Objetivo del proyecto
-
-* Introducir la entrada de datos en programas
-* Trabajar con variables
-* Generar salida dinámica basada en el usuario
+  * `string` almacena texto
+  * `readln()` captura la entrada del usuario
+  * `writeln()` muestra el resultado
 
 ---
 
@@ -84,12 +100,23 @@ Hola mundo, bienvenido Gabo
 
 ```
 .
+├── holamundonombre.cpp
 ├── holamundonombre.pas
 ├── README.md
 ```
 
 ---
 
+## 🎯 Objetivo del proyecto
+
+* Practicar entrada de datos
+* Comparar sintaxis entre lenguajes
+* Construir programas interactivos básicos
+
+---
+
 ## 🚀 Autor
+
+Proyecto creado con fines educativos.
 
 Proyecto educativo para practicar fundamentos de programación.
