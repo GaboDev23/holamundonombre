@@ -1,8 +1,8 @@
-# 🌍 Hola Mundo Multilenguaje
+# 🌍 Hola Mundo con Nombre (Multilenguaje)
 
 ## 📌 Descripción
 
-Este proyecto reúne la clásica implementación de **"Hola mundo"** en múltiples lenguajes de programación.
+Este proyecto reúne la implementación de **"Hola mundo" con nombre**, donde el usuario ingresa su nombre y recibe un saludo personalizado en múltiples lenguajes de programación.
 
 Ideal para:
 
@@ -14,14 +14,49 @@ Ideal para:
 
 ## 💻 Lenguajes incluidos
 
+### 🔹 Java ☕ (con nombre)
+
+```java
+package holamundonombre;
+import java.util.Scanner;
+
+public class HolaMundoNombre {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Escribe tu nombre: ");
+        String nombre = sc.nextLine();
+        
+        System.out.println("Hola mundo! Bienvenido " + nombre);
+
+    }
+}
+```
+
+#### ▶ Compilación y ejecución
+
+```bash
+javac HolaMundoNombre.java
+java holamundonombre.HolaMundoNombre
+```
+
+---
+
 ### 🔹 C++
 
 ```cpp
 #include <iostream>
-
+#include <string>
 int main() {
-    std::cout << "Hola mundo\n";
-    return 0;
+ std::string nombre;
+
+ std::cout << "Ingresa tu nombre: ";
+ std::getline(std::cin, nombre);
+
+ std::cout << "\n";
+
+ std::cout << "Hola mundo, Bienvenido " << nombre << "\n";
 }
 ```
 
@@ -37,9 +72,13 @@ g++ holamundo.cpp -o holamundo
 ### 🔹 Pascal
 
 ```pascal
-program holamundo;
+program HolaMundoNombre;
+var nombre: string;
 begin
-    writeLn('Hola mundo')
+ write('Ingresa tu nombre: ');
+ readln(nombre);
+
+ writeln('Hola mundo, bienvenido ' ,nombre);
 end.
 ```
 
@@ -55,7 +94,9 @@ fpc holamundo.pas
 ### 🔹 Python
 
 ```python
-print('Hola mundo')
+nombre = input("Ingrese su nombre: ")
+
+print(f'Hola mundo, bienvenido {nombre}')
 ```
 
 #### ▶ Ejecución
@@ -69,36 +110,15 @@ python3 holamundo.py
 ### 🔹 JavaScript
 
 ```javascript
-console.log("Hola Mundo");
+let nombre = prompt('Ingresa tu nombre');
+
+alert(`Hola mundo! Bienvenido ${nombre}`);
 ```
 
 #### ▶ Ejecución (Node.js)
 
 ```bash
 node holamundo.js
-```
-
----
-
-### 🔹 Java ☕
-
-```java
-package holamundo;
-
-public class holamundo {
-
-    public static void main(String[] args) {
-        System.out.println("Hola mundo!");
-
-    }
-}
-```
-
-#### ▶ Compilación y ejecución
-
-```bash
-javac holamundo.java
-java holamundo.holamundo
 ```
 
 ---
@@ -121,38 +141,12 @@ cargo run
 
 ---
 
-### 🔹 Rust 🦀
-
-```rust
-use std::io;
-use std::io::Write;
-
-fn main() {
-    print!("Ingresa tu nombre: ");
-    io::stdout().flush().unwrap();
-    
-    let mut nombre = String::new();
-    io::stdin().read_line(&mut nombre).expect("Error al leer el nombre");
-
-    println!("Hola mundo! Bienvenido {}", nombre.trim());
-}
-```
-
-#### ▶ Crear y ejecutar
-
-```bash
-cargo new holamundonombre_rust
-cd holamundonombre_rust
-cargo run
-```
-
----
-
 ## 🧠 Explicación simple
 
 Todos los programas hacen exactamente lo mismo:
 
-👉 Mostrar el mensaje **"Hola mundo"**
+👉 Pedir el nombre del usuario
+👉 Mostrar un saludo personalizado
 
 Cada lenguaje tiene su estilo:
 
@@ -175,6 +169,7 @@ Cada lenguaje tiene su estilo:
 ├── holamundo.js
 ├── holamundo.java
 ├── holamundo_rust/
+├── HolaMundoCS/
 ├── README.md
 ```
 
